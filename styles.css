@@ -1,0 +1,155 @@
+/* General Styling */
+body {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* Game Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 8px;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Cells */
+.cell {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  background: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Cell Hover Effect */
+.cell:hover {
+  background: #f0f0f0;
+}
+
+/* Disable Clicked Cells */
+.cell.taken {
+  cursor: not-allowed;
+}
+
+/* Winning Text */
+h2 {
+  font-size: 1.5em;
+  margin: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Reset Button */
+button {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 12px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* ========================= */
+/* 🎉 Full-Screen Popup Style */
+/* ========================= */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Active state */
+.popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Popup Content */
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+/* Message inside popup */
+.popup-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Play Again Button */
+#playAgain {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 12px 20px;
+  background: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#playAgain:hover {
+  background: #e64a19;
+}
